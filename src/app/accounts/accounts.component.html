@@ -15,7 +15,14 @@
               </button>
             </div>
           </form>
-
+          <ng-template #errorTemplate>
+            <ng-container *ngIf="errorMessage; else loading">
+              <div class="text-danger">{{errorMessage}}</div>
+            </ng-container>
+            <ng-template #loading>
+              Loading ...
+            </ng-template>
+          </ng-template>
             <ng-container *ngIf="accountObservable | async as accountDetails">
               <div class="mb-2">
                 <label>Account ID :</label>

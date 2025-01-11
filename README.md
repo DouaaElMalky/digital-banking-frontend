@@ -20,3 +20,30 @@
 
 <h3>Affichage d'un message d'erreur au cas ou l'url est mal ecrit</h3>
 <img src="captures/errorMessage.jpg">
+
+<h2>Gestion des operations bancaires</h2>
+
+<h2>Debit</h2>
+<h3>L'Id du compte</h3>
+<img src="captures/accountId.jpg">
+<h3>Avant debit</h3>
+<img src="captures/avantDebit.jpg">
+<h3>Apres debit</h3>
+<img src="captures/apresDebit.jpg">
+
+<h2>Credit</h2>
+<h3>Avant credit</h3>
+<img src="captures/avantCredit.jpg">
+<h3>Apres credit</h3>
+<img src="captures/apresCredit.jpg">
+
+<h2>Virements</h2>
+<h3>Compte source - Avant virement</h3>
+<img src="captures/avantTransfer.jpg">
+<h3>Compte source - Apres virement</h3>
+<img src="captures/apresTransfer.jpg">
+<h3>Compte destination - Apres virement</h3>
+<img src="captures/apresTransferAccountDestination.jpg">
+
+----
+

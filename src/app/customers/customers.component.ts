@@ -4,6 +4,7 @@ import {CustomerService} from '../services/customer.service';
 import {catchError, map, Observable, throwError} from 'rxjs';
 import {Customer} from '../model/customer.model';
 import {FormBuilder, FormGroup} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-customers',
@@ -17,7 +18,7 @@ export class CustomersComponent implements OnInit{
   errorMessage! : string;
   searchFormGroup : FormGroup | undefined;
   // searchFormGroup! : FormGroup; //avec le ! on n'aura pas besoin de faire le test au niveau du code html
-  constructor(private customerService: CustomerService, private fb: FormBuilder) { }
+  constructor(private customerService: CustomerService, private fb: FormBuilder, private router : Router) { }
   ngOnInit() : void {
     this.searchFormGroup = this.fb.group({
       keyword : this.fb.control("")
@@ -52,5 +53,9 @@ export class CustomersComponent implements OnInit{
         console.log(err);
       }
     })
+  }
+
+  handleCustomerAccounts(customer: Customer) {
+    this.router.navigateByUrl("/customer-accounts/"+customer.id, {state : customer});
   }
 }
